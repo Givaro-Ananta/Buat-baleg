@@ -48,8 +48,7 @@ export const authOptions: NextAuthOptions = {
       try {
         const appUser = await getUserByEmail(user.email);
         if (!appUser) {
-          const baseUrl = process.env.NEXTAUTH_URL ?? 'http://localhost:3000';
-          return `${baseUrl}/login?error=unregistered`;
+          return '/login?error=unregistered';
         }
         return true;
       } catch (err) {
