@@ -315,7 +315,7 @@ export default function PengawasPage() {
 
           <form onSubmit={handleSubmitStep1} className="space-y-5">
             <Card>
-              <h2 className="text-lg font-bold text-navy-900 mb-4">📋 Informasi Acara</h2>
+              <h2 className="text-lg font-bold text-navy-900 mb-4">📋 Informasi BAP</h2>
 
               {/* Cascading dropdowns */}
               <div className="mb-4">
@@ -337,7 +337,7 @@ export default function PengawasPage() {
               {/* Nama Acara */}
               <div className="space-y-1 mb-4">
                 <label className="block text-sm font-semibold text-navy-900">
-                  Nama Acara Pengawasan <span className="text-red-500">*</span>
+                  Deskripsi BAP <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="input-nama-acara"
