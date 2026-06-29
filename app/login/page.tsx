@@ -58,23 +58,16 @@ function LoginContent() {
             <img src="/logo_baleg.png" alt="Logo Badan Legislatif HMSD" className="w-full h-full object-contain" />
           </div>
           <div>
-            <p className="text-white font-extrabold text-xl leading-none tracking-tight">HMSD ITERA</p>
-            <p className="text-gold-400 text-xs font-semibold tracking-widest uppercase mt-0.5">Badan Legislatif</p>
+            <p className="text-white font-extrabold text-xl leading-none tracking-tight">BALEG</p>
+            <p className="text-gold-400 text-[10px] font-semibold tracking-widest uppercase mt-1">HMSD ADYATAMA ITERA</p>
           </div>
         </div>
 
         {/* Hero text */}
-        <div className="relative z-10 space-y-8">
+        <div className="relative z-10 space-y-6">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/20 rounded-full px-3 py-1">
-              <span className="w-1.5 h-1.5 bg-gold-400 rounded-full animate-pulse" />
-              <span className="text-gold-400 text-xs font-semibold tracking-wider uppercase">Sistem Aktif</span>
-            </div>
             <h1 className="text-4xl xl:text-5xl font-extrabold text-white leading-tight">
-              Pengumpulan<br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-gold-400 to-gold-200">
-                Bukti Pengawasan
-              </span>
+              Pengumpulan <span className="text-transparent bg-clip-text bg-linear-to-r from-gold-400 to-gold-200">Bukti Pengawasan</span>
             </h1>
             <p className="text-sky-200/70 text-base leading-relaxed max-w-sm">
               Platform terpusat untuk pengawas mengunggah bukti kegiatan — tersimpan otomatis di Google Drive dan tercatat di Google Sheets.
@@ -99,7 +92,7 @@ function LoginContent() {
 
         {/* Footer */}
         <div className="relative z-10">
-          <p className="text-white/25 text-xs">© 2026 HMSD ITERA — Sains Data</p>
+          <p className="text-white/25 text-xs">© 2026 BALEG HMSD ADYATAMA ITERA — Sains Data</p>
         </div>
       </div>
 
@@ -113,8 +106,8 @@ function LoginContent() {
               <img src="/logo_baleg.png" alt="Logo Badan Legislatif HMSD" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h1 className="text-2xl font-extrabold text-navy-900">HMSD ITERA</h1>
-              <p className="text-gold-600 text-xs font-semibold tracking-widest uppercase">Badan Legislatif</p>
+              <h1 className="text-2xl font-extrabold text-navy-900">BALEG</h1>
+              <p className="text-gold-600 text-xs font-semibold tracking-widest uppercase">HMSD ADYATAMA ITERA</p>
               <p className="text-gray-400 text-sm mt-1">Sistem Pengumpulan Bukti Pengawasan</p>
             </div>
           </div>
@@ -185,7 +178,7 @@ function LoginContent() {
           </div>
 
           <p className="text-center text-xs text-gray-300">
-            © 2026 HMSD ITERA — Sains Data
+            © 2026 BALEG HMSD ADYATAMA ITERA — Sains Data
           </p>
         </div>
       </div>
