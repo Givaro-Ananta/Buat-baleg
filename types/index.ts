@@ -36,8 +36,8 @@ export interface DepartmentRow {
 
 // ─── Submission ───────────────────────────────────────────────────────────────
 
-export type VerificationStatus = 'Belum Diperiksa' | 'Sesuai' | 'Perlu Revisi';
-export type TimeStatus = 'Tepat Waktu' | 'Terlambat';
+export type VerificationStatus = 'Draft' | 'Belum Diperiksa' | 'Sesuai' | 'Perlu Revisi';
+export type TimeStatus = 'Tepat Waktu' | 'Terlambat' | 'Mohon Upload BAP';
 export type FileType = 'Foto' | 'Video' | 'Dokumen' | 'Lainnya';
 
 export interface Submission {
