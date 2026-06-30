@@ -12,14 +12,12 @@ declare module 'next-auth' {
       image?: string;
       role: 'Pengawas' | 'Master Admin';
     };
-    accessToken?: string;
   }
 }
 
 declare module 'next-auth/jwt' {
   interface JWT {
     role?: 'Pengawas' | 'Master Admin';
-    accessToken?: string;
   }
 }
 
@@ -30,7 +28,7 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
       authorization: {
         params: {
-          scope: 'openid email profile https://www.googleapis.com/auth/drive',
+          scope: 'openid email profile',
         },
       },
     }),
@@ -57,10 +55,7 @@ export const authOptions: NextAuthOptions = {
       }
     },
 
-    async jwt({ token, user, account }) {
-      if (account) {
-        token.accessToken = account.access_token;
-      }
+    async jwt({ token, user }) {
       // On initial sign in, fetch role from Sheets
       if (user?.email) {
         if (!process.env.SPREADSHEET_ID) {
@@ -82,7 +77,6 @@ export const authOptions: NextAuthOptions = {
       if (session.user) {
         session.user.role = token.role ?? 'Pengawas';
         session.user.id = token.sub ?? session.user.email;
-        session.accessToken = token.accessToken;
       }
       return session;
     },
