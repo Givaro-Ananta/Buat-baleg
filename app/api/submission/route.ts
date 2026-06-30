@@ -43,7 +43,9 @@ export async function POST(req: NextRequest) {
         }
       }
 
-      // Upload to same Drive folder (using Service Account)
+      const accessToken = (session as any).accessToken;
+
+      // Upload to same Drive folder
       for (const file of files) {
         const buffer = Buffer.from(await file.arrayBuffer());
         await uploadFileToDrive({
@@ -51,6 +53,7 @@ export async function POST(req: NextRequest) {
           fileName: file.name,
           mimeType: file.type,
           folderId: folderIdInput,
+          accessToken,
         });
       }
 
@@ -132,12 +135,15 @@ export async function POST(req: NextRequest) {
     let linkFolderDrive = '';
     let folderId = '';
 
+    const accessToken = (session as any).accessToken;
+
     if (process.env.DRIVE_ROOT_FOLDER_ID) {
       const result = await ensureSubmissionFolder({
         namaDepartemen,
         namaDivisi,
         namaAcara,
         tanggalPelaksanaan,
+        accessToken,
       });
       linkFolderDrive = result.folderLink;
       folderId = result.folderId;
@@ -149,6 +155,7 @@ export async function POST(req: NextRequest) {
           fileName: file.name,
           mimeType: file.type,
           folderId,
+          accessToken,
         });
       }
     } else {
