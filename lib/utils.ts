@@ -51,6 +51,7 @@ export function formatTanggal(date: Date | string): string {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
+    timeZone: 'Asia/Jakarta',
   });
 }
 
@@ -68,6 +69,7 @@ export function formatTanggalWaktu(date: Date | string): string {
     year: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
+    timeZone: 'Asia/Jakarta',
   });
 }
 
